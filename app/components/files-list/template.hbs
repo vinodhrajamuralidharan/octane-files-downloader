@@ -1,1 +1,14 @@
-{{yield}}
+<thead>
+    <tr>
+      {{#each this.headers as |header|}}
+        <th>{{header}}</th>
+      {{/each}}
+    </tr>
+</thead>
+<tbody>
+  {{#each @lists as |list|}}
+    <tr class={{if list.isChecked 'row-selected'}} {{on "click" (fn @selectHandler list)}}>
+      <FilesList::ListRow @isChecked={{list.isChecked}} @name={{list.name}} @device={{list.device}} @path={{list.path}} @status={{list.status}}/>
+    </tr>
+  {{/each}}
+</tbody>

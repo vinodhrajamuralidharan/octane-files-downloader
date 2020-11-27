@@ -1,1 +1,15 @@
-{{yield}}
+<td>
+  <Input
+    @type="checkbox"
+    @checked={{@isChecked}}
+  />
+</td>
+<td>{{@name}}</td>
+<td>{{@device}}</td>
+<td>{{@path}}</td>
+<td>
+  {{#if this.showCircle}}
+    <span class="circle"></span>
+  {{/if}}
+  {{@status}}
+</td>
