@@ -1,1 +1,4 @@
-{{outlet}}
+<div class="table-manager">
+  <NotificationComponent @downloadFiles={{this.downloadFiles}} @checkBoxStatus={{this.checkBoxStatus}}/>
+  <FilesList @lists={{this.model}} @selectHandler={{this.selectHandler}}/>
+</div>

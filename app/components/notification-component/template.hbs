@@ -1,1 +1,11 @@
-{{yield}}
+<section>
+  <div class="selection-status">
+    <Input
+    @type="checkbox"
+    @indeterminate={{@checkBoxStatus.indeterminate}}
+    @checked={{@checkBoxStatus.selection}}
+    />
+    {{@checkBoxStatus.label}}{{@checkBoxStatus.count}}
+  </div>
+  <div class="downloader" {{on "click" @downloadFiles}}> <img width="20" height="20" src="https://preview.pixlr.com/images/800wm/100/1/1001389312.jpg">Download Selected</div>
+</section>
