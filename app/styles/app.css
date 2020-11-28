@@ -49,7 +49,3 @@ section {
 .downloader {
   margin-left: 42px;
 }
-
-input:indeterminate {
-  background-color: #EEEEEE;
-}
